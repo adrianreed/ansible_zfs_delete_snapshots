@@ -1,0 +1,3 @@
+- pause:
+    prompt: "Please confirm you want to delete these snapshots (yes/no)"
+  register: delete_snaps

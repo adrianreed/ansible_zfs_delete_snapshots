@@ -1,0 +1,7 @@
+- include_role:
+    name: check_snaps
+
+- import_tasks: prompt_confirmation.yml
+
+- import_tasks: delete_search.yml
+  when: delete_snaps['user_input'] | bool

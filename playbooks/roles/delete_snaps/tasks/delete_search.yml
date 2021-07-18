@@ -1,0 +1,4 @@
+- name: Deleteing filtered snapshots
+  shell:
+    cmd: /usr/sbin/zfs destroy -f "{{ item }}"
+  loop: "{{ del_snaps }}"

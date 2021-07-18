@@ -1,0 +1,7 @@
+- set_fact:
+    del_snaps: "{{ all_snaps.stdout_lines | reject('search', save) | select('match', delete) | list }}"
+  when: save is defined
+
+- set_fact:
+    del_snaps: "{{ all_snaps.stdout_lines | select('match', delete) | list }}"
+  when: save is not defined

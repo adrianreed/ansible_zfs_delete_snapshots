@@ -1,0 +1,4 @@
+- shell:
+    cmd: /usr/sbin/zfs list -t snap -H -o name
+  register: all_snaps
+  changed_when: all_snaps.rc != 0

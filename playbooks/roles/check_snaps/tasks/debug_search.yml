@@ -1,0 +1,3 @@
+- name: 'The following snapshots match your filter:'
+  debug:
+    var: del_snaps
